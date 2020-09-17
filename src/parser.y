@@ -12,7 +12,7 @@
     void xxerror(void *scanner, struct ast_node** node, const char *s) { (void)node; (void)scanner; printf("ERROR: %s\n", s); }
 #ifdef NIF
     #include "erl_nif.h"
-    #define YYMALLOC enif_alloc
+    #define YYMALLOC malloc
     #define YYFREE enif_free
 #endif
 #if defined(__GNUC__)

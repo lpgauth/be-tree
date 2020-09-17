@@ -9,7 +9,7 @@
 #include "erl_nif.h"
 void* enif_calloc(size_t size)
 {
-    void* ptr = enif_alloc(size);
+    void* ptr = malloc(size);
     if(ptr != NULL) {
         memset(ptr, 0, size);
     }

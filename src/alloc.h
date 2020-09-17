@@ -2,7 +2,7 @@
 
 #ifdef NIF
 #include <erl_nif.h>
-#define bmalloc enif_alloc
+#define bmalloc malloc
 #define bcalloc enif_calloc
 #define brealloc enif_realloc
 #define bfree enif_free
